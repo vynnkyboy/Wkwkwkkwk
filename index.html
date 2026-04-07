@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Adsterra Monetization - Simple Website</title>
+    <title>Adsterra Monetization - Neobrutalist Style</title>
     
-    <!-- Adsterra Popunder Script 
-    <script src="https://pl29086126.profitablecpmratenetwork.com/71/8e/44/718e4494ce2e1b56dcae72eada7dab55.js"></script> -->
+    <!-- Adsterra Popunder Script -->
+    <script src="https://pl29086126.profitablecpmratenetwork.com/71/8e/44/718e4494ce2e1b56dcae72eada7dab55.js"></script>
 
     <style>
         * {
@@ -16,8 +16,10 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Space Grotesk', 'Segoe UI', system-ui, sans-serif;
+            background: #faf9f6;
+            background-image: radial-gradient(circle at 25% 40%, rgba(163, 230, 53, 0.08) 0%, transparent 50%),
+                              radial-gradient(circle at 75% 60%, rgba(192, 132, 252, 0.08) 0%, transparent 50%);
             min-height: 100vh;
         }
         
@@ -25,85 +27,115 @@
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 24px;
+        }
+        
+        /* Neobrutalist Card Style */
+        .neo-card {
+            background: white;
+            border: 3px solid #1c1917;
+            border-radius: 0px;
+            box-shadow: 8px 8px 0px 0px #1c1917;
+            transition: all 0.2s ease;
+        }
+        
+        .neo-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 12px 12px 0px 0px #1c1917;
         }
         
         /* Header */
         .header {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #a3e635 0%, #c084fc 100%);
+            padding: 40px;
+            margin-bottom: 24px;
             text-align: center;
+            border: 3px solid #1c1917;
+            box-shadow: 8px 8px 0px 0px #1c1917;
         }
         
         h1 {
-            color: #333;
-            margin-bottom: 10px;
+            color: #1c1917;
+            margin-bottom: 12px;
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
         }
         
         /* Layout 3 kolom */
         .layout {
             display: flex;
-            gap: 20px;
+            gap: 24px;
             flex-wrap: wrap;
         }
         
         /* Sidebar Kiri - 160x600 Banner */
         .sidebar-left {
-            flex: 0 0 160px;
+            flex: 0 0 180px;
             position: sticky;
-            top: 20px;
+            top: 24px;
             height: fit-content;
         }
         
         /* Content Tengah */
         .content {
             flex: 1;
-            min-width: 300px;
+            min-width: 280px;
         }
         
         /* Sidebar Kanan - Native Banner */
         .sidebar-right {
-            flex: 0 0 300px;
+            flex: 0 0 320px;
             position: sticky;
-            top: 20px;
+            top: 24px;
             height: fit-content;
         }
         
         /* Card styling */
         .card {
             background: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 3px solid #1c1917;
+            border-radius: 0px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 6px 6px 0px 0px #1c1917;
+            transition: all 0.2s ease;
+        }
+        
+        .card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 10px 10px 0px 0px #1c1917;
         }
         
         /* Ad containers */
         .ad-container {
-            background: #f5f5f5;
-            border-radius: 8px;
+            background: #f5f5f0;
+            border: 3px solid #1c1917;
+            border-radius: 0px;
             overflow: hidden;
             text-align: center;
+            box-shadow: 4px 4px 0px 0px #1c1917;
         }
         
         .ad-label {
             font-size: 10px;
-            color: #999;
+            font-weight: bold;
+            color: #1c1917;
             text-align: center;
-            padding: 5px;
-            background: #eee;
+            padding: 8px;
+            background: #e5e5e0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         /* Social Bar Container */
         .social-bar-container {
             background: white;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            padding: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 3px solid #1c1917;
+            border-radius: 0px;
+            margin-bottom: 24px;
+            padding: 12px;
+            box-shadow: 6px 6px 0px 0px #1c1917;
         }
         
         /* Responsive */
@@ -123,54 +155,133 @@
                 position: static;
                 order: 3;
             }
-            
-            .banner-horizontal {
-                display: flex;
-                justify-content: center;
-            }
         }
         
         /* Button styling */
         .btn {
             display: inline-block;
-            padding: 10px 20px;
-            background: #667eea;
-            color: white;
+            padding: 12px 24px;
+            background: #a3e635;
+            border: 2px solid #1c1917;
+            color: #1c1917;
             text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-            transition: background 0.3s;
+            font-weight: bold;
+            margin-top: 12px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            text-align: center;
         }
         
         .btn:hover {
-            background: #764ba2;
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px 0px #1c1917;
+            background: #c084fc;
         }
         
         /* Smartlink button */
         .smartlink-btn {
             display: inline-block;
-            padding: 15px 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #a3e635 0%, #c084fc 100%);
+            border: 3px solid #1c1917;
+            color: #1c1917;
             text-decoration: none;
-            border-radius: 10px;
+            border-radius: 0px;
             font-weight: bold;
-            margin-top: 10px;
-            transition: transform 0.3s;
+            margin-top: 16px;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .smartlink-btn:hover {
-            transform: scale(1.05);
+            transform: translate(-3px, -3px);
+            box-shadow: 6px 6px 0px 0px #1c1917;
         }
         
         /* Footer */
         .footer {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
+            background: #1c1917;
+            padding: 32px;
+            border-radius: 0px;
+            margin-top: 32px;
             text-align: center;
-            color: #666;
+            color: #faf9f6;
+            border: 3px solid #1c1917;
+            box-shadow: 6px 6px 0px 0px #a3e635;
+        }
+        
+        .footer a {
+            color: #a3e635;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+            color: #c084fc;
+        }
+        
+        /* Badge style */
+        .badge {
+            display: inline-block;
+            background: #c084fc;
+            border: 2px solid #1c1917;
+            padding: 6px 16px;
+            font-weight: bold;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            box-shadow: 3px 3px 0px 0px #1c1917;
+        }
+        
+        /* List styling */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        ul li {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        ul li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: #c084fc;
+            font-weight: bold;
+        }
+        
+        /* Input styling */
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #1c1917;
+            border-radius: 0px;
+            font-family: inherit;
+            margin-top: 12px;
+            background: white;
+        }
+        
+        input[type="email"]:focus {
+            outline: none;
+            background: #f5f5f0;
+        }
+        
+        /* Glitch effect for header */
+        @keyframes glitch {
+            0%, 100% { transform: skew(0deg, 0deg); }
+            95% { transform: skew(0deg, 0deg); }
+            96% { transform: skew(5deg, 2deg); }
+            97% { transform: skew(-3deg, -1deg); }
+            98% { transform: skew(2deg, 1deg); }
+            99% { transform: skew(-1deg, -0.5deg); }
+        }
+        
+        .glitch-text {
+            animation: glitch 3s infinite;
         }
     </style>
 </head>
@@ -179,7 +290,7 @@
         
         <!-- Social Bar (Top) -->
         <div class="social-bar-container">
-            <div class="ad-label">ADVERTISEMENT</div>
+            <div class="ad-label">⚡ SPONSORED CONTENT ⚡</div>
             <div id="social-bar">
                 <script src="https://pl29086129.profitablecpmratenetwork.com/ac/55/0a/ac550a2b28245ac6851eae631644c316.js"></script>
             </div>
@@ -187,8 +298,9 @@
         
         <!-- Header -->
         <div class="header">
-            <h1>🚀 Welcome to Our Website</h1>
-            <p>Your trusted platform for quality content and services</p>
+            <div class="badge">✦ HOT OFFER 2026 ✦</div>
+            <h1 class="glitch-text">🚀 MONETIZE<br>YOUR TRAFFIC</h1>
+            <p style="font-size: 1.2rem; font-weight: 500; color: #1c1917;">Start earning with the highest CPM rates in the industry!</p>
         </div>
         
         <!-- Main Layout 3 Kolom -->
@@ -197,7 +309,7 @@
             <!-- LEFT SIDEBAR: Banner 160x600 -->
             <div class="sidebar-left">
                 <div class="ad-container">
-                    <div class="ad-label">ADVERTISEMENT - 160x600</div>
+                    <div class="ad-label">📢 PREMIUM AD SPACE</div>
                     <div id="banner-160x600">
                         <script>
                             atOptions = {
@@ -207,55 +319,72 @@
                                 'width' : 160,
                                 'params' : {}
                             };
-                            </script>
-                            <script src="https://www.highperformanceformat.com/76097b309d2019278d6ecdb6e46b5c6e/invoke.js"></script>
-                        </div>
+                        </script>
+                        <script src="https://www.highperformanceformat.com/76097b309d2019278d6ecdb6e46b5c6e/invoke.js"></script>
+                    </div>
+                </div>
+                
+                <!-- Bonus content -->
+                <div class="card" style="margin-top: 24px; background: #fef9e6;">
+                    <h3 style="margin-bottom: 12px;">💎 TIPS & TRICKS</h3>
+                    <p style="font-size: 14px;">Maximize your earnings with our proven strategies!</p>
+                    <a href="#" class="btn" style="display: block; text-align: center; font-size: 12px;">Learn More →</a>
                 </div>
             </div>
             
             <!-- MAIN CONTENT -->
             <div class="content">
                 <div class="card">
-                    <h2>📝 About Us</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                    <p style="margin-top: 10px;">Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    <a href="#" class="btn">Read More →</a>
+                    <div class="badge" style="background: #a3e635; margin-bottom: 16px;">✦ FEATURED ✦</div>
+                    <h2 style="margin-bottom: 16px; font-size: 1.8rem;">📝 Welcome to <br>Adsterra Monetization Hub</h2>
+                    <p>Join thousands of publishers who are already earning with the world's leading ad network. Get access to high-converting campaigns and maximize your revenue today!</p>
+                    <p style="margin-top: 12px;">Our platform offers the best CPM rates, real-time statistics, and dedicated support to help you succeed.</p>
+                    <a href="#" class="btn">Learn More →</a>
                 </div>
                 
                 <div class="card">
-                    <h2>💡 Our Services</h2>
-                    <ul style="margin-left: 20px; margin-top: 10px;">
-                        <li>Web Development</li>
-                        <li>Mobile Applications</li>
-                        <li>Digital Marketing</li>
-                        <li>Content Creation</li>
-                        <li>SEO Optimization</li>
+                    <h2 style="margin-bottom: 16px;">💡 Why Adsterra?</h2>
+                    <ul>
+                        <li>High CPM Rates - Up to $15+ per 1000 views</li>
+                        <li>Multiple Ad Formats - Popunders, Banners, Native Ads</li>
+                        <li>Real-Time Statistics & Analytics</li>
+                        <li>Fast & Reliable Payments (Weekly/Monthly)</li>
+                        <li>Dedicated Account Manager</li>
                     </ul>
                 </div>
                 
-                <div class="card">
-                    <h2>🎯 Why Choose Us?</h2>
-                    <p>We provide high-quality services with competitive prices. Our team is dedicated to delivering the best results for our clients.</p>
+                <div class="card" style="background: linear-gradient(135deg, #a3e63510 0%, #c084fc10 100%);">
+                    <h2 style="margin-bottom: 16px;">🎯 Start Earning Today!</h2>
+                    <p>Get started in 3 simple steps:</p>
+                    <ol style="margin-top: 16px; margin-left: 20px;">
+                        <li style="margin-bottom: 8px;"><strong>1.</strong> Sign up for free</li>
+                        <li style="margin-bottom: 8px;"><strong>2.</strong> Add your website</li>
+                        <li style="margin-bottom: 8px;"><strong>3.</strong> Start earning money!</li>
+                    </ol>
                     
                     <!-- Smartlink Button inside content -->
-                    <div style="text-align: center; margin-top: 20px;">
+                    <div style="text-align: center; margin-top: 24px;">
                         <a href="https://www.profitablecpmratenetwork.com/m6ah416c?key=8efaa3fd77488aaf3a484671c3bb78c2" 
                            target="_blank" 
                            class="smartlink-btn">
-                            🔥 SPECIAL OFFER - CLICK HERE 🔥
+                            🔥 CLAIM YOUR BONUS NOW 🔥
                         </a>
                     </div>
                 </div>
                 
                 <div class="card">
-                    <h2>📊 Testimonials</h2>
-                    <div style="margin-top: 15px;">
-                        <p><strong>John Doe</strong> - ★★★★★</p>
-                        <p>"Excellent service! Very professional and fast response."</p>
+                    <h2 style="margin-bottom: 16px;">📊 What Our Publishers Say</h2>
+                    <div style="margin-top: 16px; padding: 16px; background: #f5f5f0; border-left: 4px solid #a3e635;">
+                        <p><strong>⭐ Sarah Johnson</strong> - 5,000,000+ monthly views</p>
+                        <p>"Adsterra has been a game-changer for my website. The CPM rates are unbeatable!"</p>
                     </div>
-                    <div style="margin-top: 15px;">
-                        <p><strong>Jane Smith</strong> - ★★★★★</p>
-                        <p>"Highly recommended! They delivered beyond my expectations."</p>
+                    <div style="margin-top: 16px; padding: 16px; background: #f5f5f0; border-left: 4px solid #c084fc;">
+                        <p><strong>⭐ Michael Chen</strong> - 2,500,000+ monthly views</p>
+                        <p>"Fast payments, great support, and amazing revenue. Highly recommended!"</p>
+                    </div>
+                    <div style="margin-top: 16px; padding: 16px; background: #f5f5f0; border-left: 4px solid #a3e635;">
+                        <p><strong>⭐ Elena Rodriguez</strong> - 1,200,000+ monthly views</p>
+                        <p>"The best ad network I've worked with. Their native ads convert like crazy!"</p>
                     </div>
                 </div>
             </div>
@@ -263,42 +392,82 @@
             <!-- RIGHT SIDEBAR: Native Banner -->
             <div class="sidebar-right">
                 <div class="ad-container">
-                    <div class="ad-label">ADVERTISEMENT - Native</div>
-                    <div id="container-e4dbd67f8863b6a73d9edbe6ae7facee"></div>
-                    <script async="async" data-cfasync="false" src="https://pl29086127.profitablecpmratenetwork.com/375572be88a20628a51a849c695bdb5c/invoke.js"></script>
+                    <div class="ad-label">🎯 NATIVE RECOMMENDATIONS</div>
                     <div id="container-375572be88a20628a51a849c695bdb5c"></div>
-
+                    <script async="async" data-cfasync="false" src="https://pl29086127.profitablecpmratenetwork.com/375572be88a20628a51a849c695bdb5c/invoke.js"></script>
                 </div>
                 
                 <!-- Additional content box -->
-                <div class="card" style="margin-top: 20px;">
-                    <h3>📧 Newsletter</h3>
-                    <p>Subscribe to get updates!</p>
-                    <input type="email" placeholder="Your email" style="width: 100%; padding: 10px; margin-top: 10px; border: 1px solid #ddd; border-radius: 5px;">
-                    <button class="btn" style="width: 100%; margin-top: 10px;">Subscribe</button>
+                <div class="card" style="margin-top: 24px; background: #a3e63520;">
+                    <h3 style="margin-bottom: 12px;">📧 GET STARTED NOW!</h3>
+                    <p>Subscribe to get exclusive offers and tips to maximize your earnings!</p>
+                    <input type="email" placeholder="Your email address">
+                    <button class="btn" style="width: 100%; margin-top: 12px;">Subscribe →</button>
+                </div>
+                
+                <!-- Stats counter -->
+                <div class="card" style="background: #1c1917; color: white;">
+                    <h3 style="margin-bottom: 12px; color: #a3e635;">📈 LIVE STATS</h3>
+                    <div style="text-align: center;">
+                        <p style="font-size: 32px; font-weight: bold;" id="counter">15,847</p>
+                        <p>Active Publishers</p>
+                        <hr style="margin: 12px 0; border-color: #333;">
+                        <p style="font-size: 24px; font-weight: bold;">$2.5M+</p>
+                        <p>Paid This Month</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ -->
+                <div class="card">
+                    <h3 style="margin-bottom: 12px;">❓ FAQ</h3>
+                    <details style="margin-bottom: 12px;">
+                        <summary style="font-weight: bold; cursor: pointer;">How do I get paid?</summary>
+                        <p style="margin-top: 8px; font-size: 14px;">We offer weekly and monthly payments via PayPal, Payoneer, Wire Transfer, and Crypto.</p>
+                    </details>
+                    <details style="margin-bottom: 12px;">
+                        <summary style="font-weight: bold; cursor: pointer;">What's the minimum payout?</summary>
+                        <p style="margin-top: 8px; font-size: 14px;">Minimum payout is only $100 for PayPal and Payoneer.</p>
+                    </details>
+                    <details>
+                        <summary style="font-weight: bold; cursor: pointer;">Is it really free?</summary>
+                        <p style="margin-top: 8px; font-size: 14px;">Yes! Sign up is completely free. You only earn money with us.</p>
+                    </details>
                 </div>
             </div>
         </div>
         
         <!-- Footer -->
         <div class="footer">
-            <p>&copy; 2024 Adsterra Monetization. All rights reserved.</p>
-            <p style="margin-top: 10px; font-size: 12px;">
-                <a href="#" style="color: #666;">Privacy Policy</a> | 
-                <a href="#" style="color: #666;">Terms of Service</a> | 
-                <a href="#" style="color: #666;">Contact Us</a>
+            <p style="font-size: 1.2rem; margin-bottom: 16px;">⚡ Adsterra Monetization Platform ⚡</p>
+            <p>&copy; 2026 Adsterra Monetization. All rights reserved.</p>
+            <p style="margin-top: 16px; font-size: 12px;">
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Service</a> | 
+                <a href="#">Contact Support</a> | 
+                <a href="#">Publishers Agreement</a>
             </p>
         </div>
     </div>
     
     <!-- Popunder akan otomatis aktif saat user klik di halaman -->
     <script>
-        // Optional: Log untuk debugging
-        console.log('Adsterra ads loaded successfully');
+        // Animated counter
+        let count = 12000;
+        const counterElement = document.getElementById('counter');
+        
+        setInterval(() => {
+            count += Math.floor(Math.random() * 50) + 10;
+            if (counterElement) {
+                counterElement.textContent = count.toLocaleString();
+            }
+        }, 5000);
+        
+        // Debug logging
+        console.log('🔥 Adsterra ads loaded successfully - Neobrutalist Mode 🔥');
         
         // Cek apakah container iklan ada
         setTimeout(() => {
-            const nativeContainer = document.getElementById('container-e4dbd67f8863b6a73d9edbe6ae7facee');
+            const nativeContainer = document.getElementById('container-375572be88a20628a51a849c695bdb5c');
             const bannerContainer = document.getElementById('banner-160x600');
             
             if (nativeContainer) {
@@ -313,6 +482,16 @@
                 console.log('❌ 160x600 banner container not found');
             }
         }, 1000);
+        
+        // Add hover effect to cards
+        document.querySelectorAll('.card, .neo-card, .ad-container').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                el.style.transform = 'translate(-2px, -2px)';
+            });
+            el.addEventListener('mouseleave', () => {
+                el.style.transform = 'translate(0px, 0px)';
+            });
+        });
     </script>
 </body>
 </html>
