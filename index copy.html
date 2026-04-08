@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    
-    <!-- SITE VERIFICATION META TAG (Added as requested) -->
-    <meta name="553b27915d8b32a650517491c81c1c5d94b72b14" content="553b27915d8b32a650517491c81c1c5d94b72b14" />
-    
     <title>Adsterra Monetization - Neobrutalist Hub</title>
     
     <!-- Adsterra Popunder Script -->
@@ -321,57 +317,6 @@
             margin: 16px 0;
             border: 1px solid #1c1917;
         }
-
-        /* New Ad Spot Styles */
-        .in-content-ad {
-            margin: 24px 0;
-            padding: 8px;
-            background: #faf9f6;
-            border: 2px dashed #1c1917;
-        }
-        
-        .leaderboard-ad {
-            margin: 24px 0;
-            text-align: center;
-        }
-        
-        .sticky-mobile-ad {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: #fff;
-            border-top: 3px solid #1c1917;
-            box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-            padding: 8px;
-            text-align: center;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-        
-        .sticky-mobile-ad.show {
-            transform: translateY(0);
-        }
-        
-        @media (min-width: 769px) {
-            .sticky-mobile-ad {
-                display: none;
-            }
-        }
-        
-        .close-sticky {
-            position: absolute;
-            top: -30px;
-            right: 0;
-            background: #1c1917;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            font-family: monospace;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
@@ -452,18 +397,6 @@
                     </div>
                     
                     <a href="#" class="btn">Start Earning Now →</a>
-                </div>
-                
-                <!-- NEW IN-CONTENT BANNER AD (Leaderboard 728x90 style) -->
-                <div class="leaderboard-ad ad-container">
-                    <div class="ad-label">📢 RECOMMENDED FOR YOU</div>
-                    <div id="incontent-banner">
-                        <script async="async" data-cfasync="false" src="https://pl29086127.profitablecpmratenetwork.com/375572be88a20628a51a849c695bdb5c/invoke.js"></script>
-                        <!-- Additional banner unit can be placed here if needed -->
-                        <div style="min-height: 90px; display: flex; align-items: center; justify-content: center; background: #f5f5f0;">
-                            <span style="color: #888;">Advertisement</span>
-                        </div>
-                    </div>
                 </div>
                 
                 <div class="card">
@@ -617,23 +550,8 @@
             </p>
         </div>
     </div>
-
-    <!-- STICKY MOBILE AD (New Ad Spot) -->
-    <div id="stickyAd" class="sticky-mobile-ad">
-        <button class="close-sticky" id="closeStickyBtn">✕ CLOSE</button>
-        <div class="ad-label" style="background: #a3e635;">📱 MOBILE OFFER</div>
-        <div id="sticky-ad-content">
-            <script async="async" data-cfasync="false" src="https://pl29086127.profitablecpmratenetwork.com/375572be88a20628a51a849c695bdb5c/invoke.js"></script>
-            <div style="min-height: 50px; padding: 10px; background: #f5f5f0;">
-                <span style="color: #1c1917; font-weight: bold;">🔥 Limited Time Offer - Click Here!</span>
-            </div>
-        </div>
-    </div>
     
     <script>
-        // SITE VERIFICATION LOG (Added as requested)
-        console.log('✅ Site verification meta tag installed: 553b27915d8b32a650517491c81c1c5d94b72b14');
-        
         // Animated counters
         let publisherCount = 15000;
         let earningsAmount = 2.5;
@@ -660,25 +578,6 @@
             }
         }, 5000);
         
-        // Show sticky mobile ad after 3 seconds
-        setTimeout(() => {
-            const stickyAd = document.getElementById('stickyAd');
-            if (stickyAd) {
-                stickyAd.classList.add('show');
-            }
-        }, 3000);
-        
-        // Close sticky ad functionality
-        const closeBtn = document.getElementById('closeStickyBtn');
-        if (closeBtn) {
-            closeBtn.addEventListener('click', () => {
-                const stickyAd = document.getElementById('stickyAd');
-                if (stickyAd) {
-                    stickyAd.classList.remove('show');
-                }
-            });
-        }
-        
         // Debug logging
         console.log('🔥 Adsterra Ads Loaded Successfully - Neobrutalist Mode 🔥');
         console.log('✅ Popunder Script Loaded');
@@ -686,22 +585,17 @@
         console.log('✅ Social Bar Script Ready');
         console.log('✅ Banner 160x300 Script Ready');
         console.log('✅ Smartlink Ready');
-        console.log('✅ New In-Content Ad Added');
-        console.log('✅ New Sticky Mobile Ad Added');
         
         // Check if ad containers exist
         setTimeout(() => {
             const nativeContainer = document.getElementById('container-375572be88a20628a51a849c695bdb5c');
             const bannerContainer = document.getElementById('banner-160x300');
             const socialContainer = document.getElementById('social-bar');
-            const incontentContainer = document.getElementById('incontent-banner');
             
             const results = {
                 'Native Banner': !!nativeContainer,
                 'Banner 160x300': !!bannerContainer,
-                'Social Bar': !!socialContainer,
-                'In-Content Banner': !!incontentContainer,
-                'Sticky Mobile Ad': !!document.getElementById('stickyAd')
+                'Social Bar': !!socialContainer
             };
             
             console.log('📊 Ad Container Status:', results);
@@ -722,10 +616,6 @@
                 console.log('✅ Social bar container found');
             } else {
                 console.log('❌ Social bar container not found');
-            }
-            
-            if (incontentContainer) {
-                console.log('✅ In-content banner container found');
             }
         }, 1000);
         
